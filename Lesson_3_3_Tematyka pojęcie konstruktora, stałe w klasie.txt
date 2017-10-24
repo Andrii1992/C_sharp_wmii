@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Samochod
+    {
+        private double cena;
+        private string model;
+        private string marka;
+
+
+        public string Marka { get; set; }
+
+        public double Cena
+        {
+            get { return cena; }
+            set { cena = value; }
+        }
+      public  void model1(string model, double cena) {
+            this.cena = cena;
+            this.model = model;
+           Console.WriteLine(this.model);
+        }
+
+        ~Samochod() {
+            Console.WriteLine("Zwalniam pamiec");
+            Console.ReadKey();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Samochod rt = new Samochod();
+            rt.Cena = 18;
+            rt.model1("VW",23);
+            int n = 31;
+
+            Console.WriteLine(int.TryParse("31",out n));
+            Console.WriteLine(rt.Cena);
+            Console.ReadKey();
+        }
+    }
+}
