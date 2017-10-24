@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class matematyka {
+     private static double pi = 3.14;
+
+     public static double pole_kola(double r) {
+            double pole = pi * r * r;
+            return pole;
+        }
+     public static double obwod_kola(double r) {
+            double obwod = 2*(pi * r);
+            return obwod;
+
+        }
+        ~matematyka() {
+            Console.WriteLine("Zwalniam pamiec");
+            Console.ReadKey();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           Console.WriteLine(matematyka.obwod_kola(3));
+           Console.WriteLine(matematyka.pole_kola(3));
+
+
+            Console.WriteLine(OpiszTyp());
+            Console.WriteLine(OpiszTyp(1));
+            Console.WriteLine(OpiszTyp("as"));
+            Console.WriteLine(OpiszTyp(2,3));
+
+            Console.ReadKey();
+        }
+
+        static string OpiszTyp()
+        {
+            return "Metoda bez argumentow";
+        }
+        static string OpiszTyp(int x)
+        {
+            return "Liczba calkowita";
+        }
+        static string OpiszTyp(string x)
+        {
+            return "Lancuch znakow";
+        }
+        static string OpiszTyp(int x, int y)
+        {
+            return "Dwie liczby calkowite";
+        }
+
+
+    }
+}
