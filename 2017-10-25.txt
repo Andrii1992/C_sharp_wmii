@@ -1,0 +1,101 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Osoba n = new Osoba("Andre","Shatkovskyi",1992);
+
+
+           n.WypiszInfo();
+
+
+            Student pa = new Student(2017,3,133858,"Pa³el","Rog",1997);
+
+            Osoba student2 = new Student(2057, 3, 135858, "Pal", "og", 1997);
+
+            Student student3 = new Student(2057, 3, 135858, "Pal", "og", 1998);
+            Osoba osoba3 = student3;
+            Student student4 = osoba3;
+
+
+            Console.ReadKey();
+
+            
+
+
+        }
+    }
+
+
+
+
+    class Osoba
+    {
+
+     protected string imie;
+     protected string nazwisko;
+     protected int rokUrodzenia;
+     protected string miejsceZamieszkania;
+
+        public Osoba(string imie, string nazwisko, int rokUrodzenia)
+           
+        {
+         
+       this.imie = imie;
+       this.nazwisko = nazwisko;
+       this.rokUrodzenia = rokUrodzenia;
+       Console.WriteLine(ObliczWiek());
+        }
+
+        public void WypiszInfo() {
+
+            Console.WriteLine(imie + " " + nazwisko + " " + rokUrodzenia);
+        
+        }
+
+        public int ObliczWiek() {
+            int x = DateTime.Now.Year - rokUrodzenia;
+            return x;
+        
+        }
+
+
+    }
+
+    class Student : Osoba { 
+    
+   int rok;
+   int numerGrupy;
+   int numerAlbumu;
+
+   public Student(int rok, int numerGrupy, int numerAlbumu, string imie,string nazwisko,int rokUrodzenia) : base(imie, nazwisko, rokUrodzenia) {
+       this.rok = rok;
+       this.numerAlbumu = numerAlbumu;
+       this.numerGrupy = numerGrupy;
+       WypiszInfo1();
+   }
+
+ 
+   public void WypiszInfo1(){
+
+       Console.WriteLine(imie + " " + nazwisko + " " + rokUrodzenia + " " + rok + " " + numerGrupy + " " + numerAlbumu);
+
+   }
+    
+    
+    }
+
+}
