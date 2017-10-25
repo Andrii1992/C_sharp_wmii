@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Konto
+    {
+        private string imie_wla;
+        private double saldo_poczatkowe;
+        private double saldo_koncowe;
+        private double przelew_miedzy_kontami;
+        private double wplata;
+        private double wyplata;
+        private static Konto temp; 
+
+
+
+        public void Wplata(double wplata)
+        {
+            saldo_poczatkowe = saldo_koncowe;
+            this.wplata = wplata;
+            saldo_koncowe += this.wplata;
+            Console.WriteLine("Saldo poczatkowe : " + saldo_poczatkowe);
+            Console.WriteLine("Saldo koncowe : " + saldo_koncowe + "\n");
+        }
+
+
+        public void Wyplata(double wyplata)
+        {
+
+            if (wyplata > saldo_koncowe) { Console.WriteLine("Niema tyle na rachunku"); }
+            else
+            {
+                saldo_poczatkowe = saldo_koncowe;
+                this.wyplata = wyplata;
+                saldo_koncowe -= this.wyplata;
+                Console.WriteLine("Saldo poczatkowe : " + saldo_poczatkowe);
+                Console.WriteLine("Saldo koncowe : " + saldo_koncowe + "\n");
+            }
+        }
+
+        public Konto() { }
+        Konto(string imie_w)
+        {
+            imie_wla = imie_w;
+            saldo_poczatkowe = 0;
+            saldo_koncowe = 0;
+            przelew_miedzy_kontami = 0;
+            wplata = 0;
+            wplata = 0;
+
+
+
+            Console.WriteLine(imie_wla);
+            Console.WriteLine(saldo_poczatkowe);
+        }
+
+        public static void Konto_creator(string imie_w) {
+          if ( temp != null){  temp = new Konto(imie_w);  }
+            else {
+                Console.WriteLine("Istnieje taki objekt");
+            }
+            
+
+
+
+
+        }
+
+
+        ~Konto()
+        {
+            Console.WriteLine("Zwalniam pamiec");
+            Console.ReadKey();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Konto.Konto_creator("nam");
+            
+            
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+
+wywolanie metode z rodzica
