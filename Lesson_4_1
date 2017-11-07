@@ -1,0 +1,103 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //   Osoba st1 = new Osoba();
+            //   Student st = new Student();
+            //   Osoba student2 = new Student();
+            //   student2.WypiszInfo();
+               Student student3 = new Student("2011","3","122586","Vincent","Dikson",1992);
+               Osoba osoba3 = student3; // referencja
+            //   Student student4 = osoba3;
+            osoba3.WypiszInfo1();
+
+            Osoba st2 = new Osoba("Eva", "Longoria", 1975);
+
+            st2.WypiszInfo1();
+            Console.ReadKey();
+        }
+    }
+    
+     internal  class Osoba
+    {
+       private string imie;
+       private string nazwisko;
+       public int rokUrodzenia;
+
+    public  Osoba() {}
+
+    public  Osoba(string imie,string nazwisko,int rokUrodzenia) {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.rokUrodzenia = rokUrodzenia;
+        }
+        public void WypiszInfo1()
+        {
+            Console.WriteLine(imie);
+            Console.WriteLine(nazwisko);
+            Console.WriteLine(rokUrodzenia);
+            Console.WriteLine(obliczwiek(rokUrodzenia));
+            Console.WriteLine(" ");
+
+        }
+        protected int obliczwiek(int rokUrodzenia) {
+            DateTime moment = DateTime.Now;
+            return moment.Year - rokUrodzenia;
+
+
+        }
+
+    }
+    
+    
+        class Student : Osoba
+    {
+        string rok;
+        string numerGrupy;
+        string numerAlbumu;
+
+
+        
+
+
+        public  Student()
+        {
+            rok = "2017";
+            numerGrupy = "03";
+            numerAlbumu = "122454";
+        }
+
+        public Student(string rok, string numerGrupy, string numerAlbumu, string imie, string nazwisko, int rokUrodzenia) : base(imie, nazwisko, rokUrodzenia) 
+        {
+            this.rok = rok;
+            this.numerGrupy = numerGrupy;
+            this.numerAlbumu = numerAlbumu;       
+            
+        }
+
+        public void WypiszInfo()
+        {
+            Console.WriteLine(rok);
+            Console.WriteLine(numerGrupy);
+            Console.WriteLine(numerAlbumu);
+            Console.WriteLine(" ");
+
+        }
+
+    }
+    
+    
+    
+    
+    
+    
+    
+}
