@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Samochud  nr = new Samochud();
+            Rower ne = new Rower();
+
+            nr.Jedz();
+            ne.Jedz();
+            ne.Klakson();
+            Pojazd rower2 = new Rower();
+
+            ((Imuzyka)rower2).Klakson();  // kolejnosc wykonania . krapka na koncu a pierwsze żutowanie
+
+
+            // D:\mkk\ConsoleApplication5
+
+            Console.ReadKey();
+
+        }
+    }
+    
+        class Samochud : Pojazd,IJazda
+    {
+        public void Jedz()
+        {
+            Console.WriteLine("Jade Smochodem");
+        }
+
+       
+    }
+    
+    
+       class Rower : Pojazd, IJazda, Imuzyka
+    {
+
+        public void Jedz()
+        {
+            Console.WriteLine("Jade Rowerkiem");
+        }
+
+        public void Klakson()
+        {
+            Console.WriteLine("Zagrożenia potrącenia czlowieka");
+        }
+    }
+    
+    
+    
+        interface IJazda
+    {
+       void Jedz();
+    }
+    
+    
+        interface Imuzyka
+    {
+       void Klakson();
+    }
+    
+    
+        class Pojazd
+    {
+
+       
+
+    }
+    
+    
+    
+}
