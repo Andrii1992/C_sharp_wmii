@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp22
+{
+
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            List<Car> cars = new List<Car>();
+            cars.Add(new Car(2010, "Ford"));
+            cars.Add(new Car(2016, "Fiat"));
+            cars.Add(new Car(2012, "Skoda"));
+            cars.Add(new Car(2010, "BMW"));
+            cars.Add(new Car(1997, "WV"));
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                Console.WriteLine(cars[i].year + " " + cars[i].brand);
+            }
+            cars.Sort();
+            for (int i = 0; i < cars.Count; i++)
+            {
+                Console.WriteLine(cars[i].year + " " + cars[i].brand);
+            }
+
+            Console.ReadKey();
+        }
+    }
+
+
+
+
+
+    class Car: IComparable<Car>
+    {
+      public  uint year;
+      public  string brand;
+
+
+     public Car(uint year, string brand) {
+            this.year = year;
+            this.brand = brand;
+
+        }
+
+        
+
+        public int CompareTo(Car obj)
+        {
+            if (this.year < obj.year)
+                return 1;
+            if (this.year > obj.year)
+                return -1;
+            else
+                return 0;
+        }
+
+
+
+        //year (rok produkcji) i brand (marka) oraz konstruktor z parametrami (year, brand).
+    }
+}
