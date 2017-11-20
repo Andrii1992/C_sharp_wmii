@@ -1,0 +1,62 @@
+
+
+    Wykonaj w ramach jednego projektu następujące polecenia:
+
+    Stwórz klasę Car.
+    Stwórz w niej nowe prywatne pola double pojemonoscSilnika, string marka.
+    Stwórz obiekt typu Car, czy masz dostęp do jego pól? czy możesz zmienić wartości? (nie zmieniaj pól klasy na publiczne).
+    Do klasy Car dodaj samodzielnie napisany konstruktor bez parametru.
+    Przeciąż konstruktor tworząc nowy: Car(double pojemonoscSilnika, string marka). Niech ten parametryczny konstruktor ustawia wartości pól pojemność silnika oraz marka. (użyj inicjalizatora this).
+    Stwórz nowy obiekt za pomocą konstruktora parametrycznego.
+    Za pomocą debuggera sprawdź jakie warości na prywatnych polach ma obiekt numer 1, a jakie obiekt 2.
+    Zmień modyfikatory dostępu konstruktorów na private. Czy jest możliwe utworzenie nowego obiektu tej klasy? Co się stało z konstruktorem domyślnym?
+    W klasie Car stwórz metodę Create(), która będzie zwracać obiekt.
+    Stwórz obiekt dzięki metodzie Create() (pamiętałeś o dodaniu static do metody? )
+    Utwórz statyczne pole int iloscKol. Następnie stwórz statyczny konstruktor ustawiający wartość tego pola na 4. Jak możesz odwołać się do pola? czy możesz go zmodyfikować? co się stanie jak dodasz readonly?
+    Uruchom program i w debuggerze sprawdź jaką wartość pola iloscKol ma wczesniej stworzony obiekt.
+    Do klasy Car dodaj destruktor ~Car(), wewnątrz dodaj następujący kod:
+
+Console.WriteLine("Zwalniam pamięć");
+Console.ReadKey();
+
+    Uruchom program i zwróć uwagę kiedy następuje zwolnienie pamięci.
+    Dodaj w klasie Car stałe pole iloscDrzwi i ustaw mu wartość 4. Jak możesz się do niego odnieść? czy możesz go zmodyfikować?
+
+    Stwórz klasę Matematyka i dodaj w niej statyczne pole pi i nadaj mu wartość 3.14. Następnie w tej klasie dodaj statyczne metody z jednym parametrem pozwalające obliczyć pole i obwód koła. W klasie Program i metodzie Main przećwiczyć użycie tych metod.
+    W klasie Program poza metodą Main dodaj kod:
+
+        static string OpiszTyp()
+        {
+            return "Metoda bez argumentów";
+        }
+        static string OpiszTyp(int x)
+        {
+            return "Liczba całkowita";
+        }
+        static string OpiszTyp(string x)
+        {
+            return "Łańcuch znaków";
+        }
+        static string OpiszTyp(int x, int y)
+        {
+            return "Dwie liczby calkowite";
+        }
+
+W metodzie Main przetestuj działanie tych metod.
+
+    Stwórz nowy projekt i w nim wykonają następujące czynnności:
+
+    dodaj klasę Samochod,
+    w klasie Samochod dodaj prywatne pole model typu string.
+    Utwórz właściwość dla tego pola za pomocą narzędzi VS – Edit/Refactor/Encapsulate Field (lub Ctrl+R,Ctrl+E).
+    w klasie Program stwórz prosty program do pobrania modelu.
+    w klasie Samochod wpisz wyrażenie propfull i naciśnij Tab. Następnie zmień typ pola i właściwości na double, nazwę pola na cena, a nazwę właściwości na Cena. Uzupełnij Program aby pobierało i zwracało dodatkowo cenę.
+    w klasie Samochod dodaj właściwość marka za pomocą skróconej deklaracji:
+
+public string Marka { get; set; }
+
+    rozbuduj Program o pobieranie i zwracanie ceny. Użyj metody TryParse(). Czemu jest to nie możliwe? Zrób konwersję/parsowanie inaczej.
+
+    Stwórz klasę Konto z kilkoma polami, metodami i konstruktorami (saldo początkowe, końcowe, przelew miedzy kontami, przelew zewnętrzny, wplata, wyplata itd.) Następnie utwórz co najmniej 3 obiekty i wykonaj kilka metody na nich.
+    Stwórz klasę Telefon, która będzie zawierała parametry do obsługi bilingu (usługa prepaid).Dodatkowo ma zawierać metody, konstruktory (saldo początkowe, końcowe, doładowanie, wysłanie smsa, rozmowa, połączenie z internetem, usługi premium). Potem stwórz kilka obiektów i wykonaj na nich metody. Na ekranie wyświetl „bilingi” dla stworzonych obiektów.
+
