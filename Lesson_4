@@ -1,0 +1,49 @@
+
+
+    Stwórz nowy projekt, a w nim wykonaj poniższe operacje:
+
+    Stwórz klasę Osoba z polami imie, nazwisko, rokUrodzenia, dodaj domyślny konstruktor i parametryczny, oraz dodaj metodę WypiszInfo() wyświetlającą wartości obiektu.
+    Stwórz klasę potomną Student z dodatkowymi polami rok, numerGrupy, numerAlbumu, stwórz konstruktury i metodę WypiszInfo().
+    Ustaw modyfikatory dostępu w klasie "rodzica" na protected.
+    W klasie Osoba dodaj metodę ObliczWiek(). Następnie stwórz obiekt z klasy Student i spróbuj na nim wywołać metodę ObliczkWiek().
+    W klasie Osoba dodaj pole miejsceZamieszkania z modyfikatorem private. Spróbuj je wywołać dla obiektu z klasy Student. Popraw kod aby wszystko działało.
+    Stwórz klasę potomną StudentPierwszegoRoku dziedziczoną z klasy Student i Osoba. Czy to możliwe? Co w C# możemy jedynie zrobić?
+    Stwórz obiekt typu Osoba z klasy Student (np. Osoba student2 = new Student() ). Wywołaj dla niego metodę WypiszInfo().
+    Stwórz nowy obiekt student3 typu Student. Następnie stwórz obiekt osoba3 typu Osoba i podstaw za niego student3. Następnie stwórz obiekt student4 typu Student i podstaw za niego osoba3.
+
+Student student3 = new Student();
+Osoba osoba3 = student3;
+Student student4 = osoba3;
+
+Dla obiektu osoba3 wywołaj metodę WypiszInfo(). Gdzie jest błąd?
+
+    W nowym projekcie stwórz klasę Osoba z prywatnymi polami imie i nazwisko. Następnie stwórz klasę potomną Pacjent z prywatnym polem wiek. W klasie Pacjent dodaj konstruktor parametryczny, który ustawi wszystkie pola z klasy bieżącej i "rodzica".
+
+    Stwórz program z klasą Konto. Dodaj w niej samodzielnie wybrane pola, metody, konstruktory, opisujące możliwe działania na koncie (saldo początkowe, końcowe, przelew, wpłata/wypłata w kasie, wypłata w bankomacie, płatność kartą, itp).
+
+    Stwórz kilka obiektów, wyciągi dla kont wyświetl na ekranie i zapisz je do pliku tekstowego.
+    Stwórz klasy potomne KontoPrywatne (rozbuduj o przelew wynagrodzenia, otrzymanie 500+, itp) i KontoFirmowe (przelewy do ZUS, US).
+    Rozbuduj program tak, by na początku sprawdzał czy istnieje plik z zapisem historii danego konta - jeśli tak, ponowne uruchomienie programu powinno wykonać dalsze operacje na koncie (a nie nadpisanie dotychczasowych).
+    Narysuj diagram UML projektu.
+
+    Zaprojektuj i zaimplementuj podstawy gry RPG. W grze może istnieć kilka typów bohaterów, lecz na początku będą tylko dwa rodzaje – wojownik i łucznik. W przyszłości planowana jest rozbudowa.
+
+    Wiadomo że wszystkie postacie będą opisane imieniem, poziomem życia, oraz posiadać będą operację która pozwoli obliczyć moc ataku.
+    Zaimplementuj wojownika i łucznika zgodnie ze schematem:
+
+Łucznik: imię, żywotność (w %), zręczność (liczba całkowita), punkty taktyki (liczba całkowita)
+
+Wojownik: imię, żywotność(w %), siła (liczba całkowita), punkty taktyki (liczba całkowita)
+
+    Zadbaj o hermetyzację w klasach.
+    Konstruktor domyślny powinien implementować bohaterów zgodnie ze schematem: Łucznik: Imię=”GoblinA”, żywotność=100%, zręczność=15, PT = 3; Wojownik: Imię=”OrkA”, żywotność=100%, siła=15,PT=1;
+    Pozostałe metody:
+
+i. zmiana pkt życia (nie mniej niż 0% i nie więcej niż 100%),
+
+ii. moc ataku (zręczność/siła * PT * żywotność) UWAGA: w przypadku wojownika gdy żywotność spada poniżej 20% wpada w szał i mnożnik żywotności zmienia się na stałe 150%
+
+Pytania: Czy pomyślałeś o klasie rodzica np.bohater? Czy Łucznik i wojownik dziedziczą po bohaterze? Czy ciężko byłoby dodać kolejnych bohaterów? Czy możliwe byłoby stworzenie klasy DrużynaBohaterów i czy miałoby to sens?
+
+    Stwórz przykłady klasy obrazujące inne związki między klasami niż dziedziczenie.
+
