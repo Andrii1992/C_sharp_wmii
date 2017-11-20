@@ -1,0 +1,78 @@
+Zadania na ćwiczenia #1:
+
+    Napisz program “Hello World”.
+
+    Napisz program wyświetlający na konsoli sumę dwóch liczb całkowitych.
+
+    Zapoznaj się ze skrótami klawiaturowymi http://visualstudioshortcuts.com/2013/, poćwiczyć ich stosowanie w praktyce przy dodawaniu komentarzy (ctrl +k, c a usunięcie to ctrl +k, u) czy zmianie nazwy zmiennej (ctrl+r,r).
+
+    Stwórz kilka zmiennych liczbowych i sprawdź działanie operatorów matematycznych (+, -, *, /,).
+
+    W klasie Program i metodzie Main dodaj kod:
+
+double liczba1 = 1.234;
+double liczba2 = 1.234f;
+double liczba3 = 1.234d;
+Console.WriteLine(liczba1);
+Console.WriteLine(liczba2);
+Console.WriteLine(liczba3);
+
+a następnie
+
+float liczba1 = 1.234;
+float liczba2 = 1.234f;
+float liczba3 = 1.234d;
+Console.WriteLine(liczba1);
+Console.WriteLine(liczba2);
+Console.WriteLine(liczba3);
+
+Skąd biorą się różnice?
+
+    W klasie Program i metodzie Main dodaj poniższy kod. Przed jego skompilowaniem przeanalizuj co powinno wyświetlić się na konsoli. Ustaw w projekcie breakpointy i sprawdź w Visual Studio kolejne etapy działania.
+
+bool prawda = true;
+int zmienna = 5;
+Console.WriteLine(prawda);
+Console.WriteLine(!prawda);
+Console.WriteLine(true & false);
+Console.WriteLine(true | false);
+Console.WriteLine(5 < 2);
+Console.WriteLine(5 > 2);
+Console.WriteLine(zmienna == 2);
+Console.WriteLine(zmienna = 2); 
+Console.WriteLine(5 != 2);
+
+    Przeanalizuj kod klasy Program z repezytorium https://github.com/pjastr/Ex101. Co należy poprawić, aby kod się kompilował?
+
+    Utwórz program, w którym będą zadeklarowane 3 zmienne a,b,c typu int (bez wspólnych dzielników innych niż 1, np. 5,9,11). Następnie wykonaj i wyświetl w aplikacji wyniki operacji: a/b, a/c,b/c,b/a,c/a,c/b.
+
+    Napisz program wczytujący z klawiatury trzy liczby. Następnie na konsoli wyświetl największą i najmniejszą z nich.
+
+    W klasie Program i metodzie Main dodaj poniższy kod. Przed jego skompilowaniem przeanalizuj co powinno wyświetlić się na konsoli. Ustaw w projekcie breakpointy i sprawdź w Visual Studio kolejne etapy działania.
+
+    /*1*/ int x = 1, y;
+    /*2*/ Console.WriteLine(++x);
+    /*3*/ Console.WriteLine(x++);
+    /*4*/ Console.WriteLine(x);
+    /*5*/ y = x++;
+    /*6*/ Console.WriteLine(y);
+    /*7*/ y = ++x;
+    /*8*/ Console.WriteLine(++y);
+
+    Zapoznaj się z działaniem następujących metod: Console.WriteLine, Console.Write, Console.Read, Console.ReadLine, Console.ReadKey.
+
+    Napisz program - konwerter temperatury. Ma wczytywać z klawiatury liczbę oraz rodzaj temperatury (można skrótowo C-Celsjusz, K-Kelwin, F-Fahrenheit). Po wpisaniu danych, ma wyświetlić temperaturę we wszystkich możliwych skalach. Program na uwzględniać zero bezwzględne.
+
+    Stwórz tablicę dwuwymiarową kwadratową (co najmniej 5x5).
+
+a) Wypisz elementy o parzystych numerach.
+
+b) Wypisz wszystkie elementy poza przekątną, wyświetlając je na ekranie w formie macierzy (bez nawiasów).
+
+    Stwórz program wypisujący kolejne liczby ciągu Fibonacciego mniejsze niż 1000.
+
+    Napisz program, który pobiera 20 liczb całkowitych od użytkownika wpisuje je do tablicy, a następnie oblicza sumę elementów tablicy, średnią arytmetyczną oraz największą i najmniejszą liczbę. Pobieramy tylko liczby unikalne, tzn. takie, których nie ma jeszcze w tablicy. Jeżeli użytkownik powtórzy liczbę, wypisywany jest stosowny komunikat.
+
+    Napisz program do rozwiązania równania kwadratowego ax^2+bx+c=0. Wartości a,b i c mają być pobrane w klawiatury. Uwzględnij wszystkie możliwe przypadki.
+
+    Napisz program pobierający z klawiatury liczbę całkowitą. Dla wczytanej liczby wyświetl na konsoli trójkąt Pascala. Wykorzystaj notację z wiki https://pl.wikipedia.org/wiki/Tr%C3%B3jk%C4%85t_Pascala.
