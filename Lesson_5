@@ -1,0 +1,106 @@
+
+
+    Stwórz nowy projekt. Wykonaj w nim następujące polecenia:
+
+    Napisz w nim pustą klasę Pojazd oraz dwie dziedziczące po niej klasy Samochod i Rower.
+    Teraz utwórz interfejs IJazda, zawierający deklarację metody Jedz() typu void (z okna Solution Explorer wybierz Add/New Item/Interface/ ew. ctr+shit+a).
+    Podepnij interfejs do klas Samochod i Rower i zaimplementuj metodę Jedz() w sposób niejawny wyświetlając w konsoli komunikat "Jadę samochodem" lub "Jadę rowerem".
+    Stwórz po jednym obiekcie typu Samochod i Rower. Dla nowo utworzonych obiektów wywołaj metodę Jedz() i zobacz co wyświetli się na ekranie.
+    Stwórz nowy interfejs IMuzyka z metodą Klakson() typu void i podepnij go do klasy Rower. Następnie za pomocą Console.Beep stwórz dźwięk dzwonka roweru (jeśli nie masz opcji usłyszenia użyj wyświetl łańcuch "dryń"). Wywołaj metodę na obiekcie typu Rower. Czy wielodziedziczenie interfejsów w C# jest możliwe?
+    Narysuj diagram UML projektu.
+    Skorzystaj z rzutowania w górę i stwórz obiekt Rower zrzutowany na typ Pojazd (Pojazd rower2 = new Rower();). Wywołaj na tym obiekcie metodę Klakson(). Czy to jest możliwe?
+
+    W nowym projekcie wykonaj poniższe czynności:
+
+    Stwórz klasę Osoba
+    Stwórz interfejsy ISport i IMuzyka, dodaj w nich deklarację metody Graj() zwracającej typ string
+    Oba interejsy podepnij pod klasę Osoba, dodaj niejawną implementację interfejsu tak by metoda zwracała string "gra".
+    w klasie Program i metodzie Main stwórz trzy obiekty za pomocą poniższego kodu:
+
+            Osoba osoba1 = new Osoba();
+            IMuzyka osoba2 = new Osoba();
+            ISport osoba3 = new Osoba();
+
+    Na powyższych obiektach wywołaj metodę Graj() i sprawdź na konsoli co zwraca.
+    W klasie Osoba dodaj jawną implementację interfejsu IMuzyka tak, aby metoda Graj() zwracała string "muzyka" (nie usuwaj niejawnej implementacji). Następnie uruchom program i sprawdź co się zmieniło. Czy pamiętasz, aby usunąć modyfikator dostępu?
+    W klasie Osoba usuń niejawną implementację interejsu. Następnie dodaj jawną implementację interfejsu ISport tak, aby metoda Graj() zwracała string "sport". Uruchom program. Co trzeba poprawić? (są dwa możliwe rozwiązania).
+
+    W nowym projekcie wykonaj poniższe czynności:
+
+    Stwórz klasę Owoc i klasę potomną Gruszka.
+    Stwórz interfejs IJedzenie i dodaj w nim deklarację metody Jedzenie() typu void.
+    Podepnij interfejs pod obie klasy stworzonę wyżej, dodaj w obu klasach implementację niejawną w postaci wyświetlania jakiegoś stringa na konsoli.
+    W klasie Program i instrukcji Main dodaj kod.
+
+            Gruszka gruszka1 = new Gruszka();
+            Owoc gruszka2 = new Gruszka();
+            IJedzenie gruszka3 = new Gruszka();
+            gruszka1.Jedzenie();
+            ((Owoc)gruszka1).Jedzenie();
+            ((Gruszka)gruszka1).Jedzenie();
+            ((IJedzenie)gruszka1).Jedzenie();
+            Console.WriteLine("---");
+            gruszka2.Jedzenie();
+            ((Owoc)gruszka2).Jedzenie();
+            ((Gruszka)gruszka2).Jedzenie();
+            ((IJedzenie)gruszka2).Jedzenie();
+            Console.WriteLine("---");
+            gruszka3.Jedzenie();
+            ((Owoc)gruszka3).Jedzenie();
+            ((Gruszka)gruszka3).Jedzenie();
+            ((IJedzenie)gruszka3).Jedzenie();
+            Console.ReadKey();
+
+Przed uruchomieniem przeanalizuj co powinno się wyświetlić na konsoli.
+
+    W nowym projekcie wykonaj czynności:
+
+    Stwórz klasę WlasnaKlasa
+    Stwórz interfejs IAaa i dodaj w nim deklarację metody Liczba() zwracającej typ int.
+    Stwórz interfejs IBbb dziedziczący z interfejsu IAaa i dodaj w nim deklarację metody Wyraz() zwracającej typ string.
+    Podejpnij interfejs IBbb pod klasę WlasnaKlasa. Zastanów się, które metody musisz obowiązkowo zaimplementować.
+    Narysuj diagram UML projektu.
+
+    W nowym projekcie wykonaj czynności:
+
+    W klasie Car dodaj pola year (rok produkcji) i brand (marka) oraz konstruktor z parametrami (year, brand).
+    W klasie Program stwórz kolekcje cars i dodaj na nią kilka samochodów za pomocą konstruktora np.:
+
+List<Car> cars = new List<Car>();
+cars.Add(new Car(2010, "Ford"));
+cars.Add(new Car(2016, "Fiat"));
+cars.Add(new Car(2012, "Skoda"));
+cars.Add(new Car(2010, "BMW"));
+
+    Do klasy Car dodaj interfejs IComparable<T> i metodę CompareTo. Następnie posortuj elementy na liście i wyświetl je kolejno na konsoli. Na koniec zmień kolejność sortowania.
+
+    Stwórz nowy projekt - Zwierzaki:
+
+    Stwórz klasę Zwierze, po której dziedziczyć będą następujące klasy: Pies, Wilk, Rekin, Orzel i Krokodyl.
+    Stwórz interfejs zawierający dwie metody: void JakSiePoruszam() i void CoJem().
+    Obiekt każdej klasy powinien umieć wywołać powyższe metody i odpowiedzieć na nie w sensowny sposób (np. "poruszam się na czterech łapach")
+    W każdej klasie potomnej po Zwierzaku dodaj pola: imię, waga, ilość nóg. Następnie poćwiczyć użycie interfejsów IComparable, IEnumerable, IClonable.
+
+    Stwórz nowy projekt - Zbiór figur:
+
+Zaimplementuj klasy, które pozwolą reprezentować obiekty w dwuwymiarowej przestrzeni.
+
+Punkt – reprezentowany przez dwie zmienne typu rzeczywistego X i Y
+
+Koło – reprezentowane przez środek koła (punkt), oraz promień.
+
+Kwadrat – reprezentowany przez 4 punkty krawędziowe.
+
+(Wszystkie powyższe klasy posiadają też pole nazwa typu string.)
+
+Stwórz potrzebne konstruktory.
+
+Dodaj interfejsy z metodami (podziel je pod względem odpowiedzialności):
+
+    metoda LiczObwód (obwód punktu = 0)
+    metoda PobierzDaneZKlawiatury
+    metoda Wyświetl
+
+Po zakończeniu implementacji stwórz kilka obiektów, policz ich obwód, a następnie je wyświetl. Na koniec stwórz kolekcję, posortuj obiekty.
+
+Na przyszłe zajęcia zapoznaj się z podstawowymi metodami związane z obsługą plików, zapisem i odczytem plików tesktowych. Pomocny materiał: http://www.cs.put.poznan.pl/anstroinski/data/uploads/mipo/materials/mipo-struktury-i-dzialania-na-plikach-w-c.pdf
