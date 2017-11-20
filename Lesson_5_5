@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp21
+{
+    class WlasnaKlasa : IBbb
+    {
+        public string Wyraz() { return "11"; }
+        public int Liczba() { return 0; }
+    }
+    
+    
+    
+        interface IAaa
+    {
+
+        int Liczba();
+
+
+    }
+    
+    
+        interface IBbb:IAaa
+    {
+        string Wyraz();
+
+    }
+      
+    
+}
