@@ -1,0 +1,105 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Interfejsy3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int i = 0;
+
+            
+            Gruszka gruszka1 = new Gruszka();
+            Owoc gruszka2 = new Gruszka();
+            IJedzenie gruszka3 = new Gruszka();
+
+            Console.Write(++i + "  ");
+
+            gruszka1.Jedzenie();  //1
+
+            Console.Write(++i + "  ");
+
+            ((Owoc)gruszka1).Jedzenie();//2
+
+            Console.Write(++i + "  ");
+
+            ((Gruszka)gruszka1).Jedzenie();//3
+
+            Console.Write(++i + "  ");
+
+            ((IJedzenie)gruszka1).Jedzenie();//4
+
+            
+
+            Console.WriteLine("---");
+            Console.Write(++i + "  ");
+            gruszka2.Jedzenie();//5
+
+
+
+            Console.Write(++i + "  ");
+
+            ((Owoc)gruszka2).Jedzenie();//6
+
+            Console.Write(++i + "  ");
+
+            ((Gruszka)gruszka2).Jedzenie();//7
+
+            Console.Write(++i + "  ");
+
+            ((IJedzenie)gruszka2).Jedzenie();///8
+
+            
+
+            Console.WriteLine("---");
+            Console.Write(++i + "  ");
+            gruszka3.Jedzenie();//9
+
+            Console.Write(++i + "  ");
+
+            ((Owoc)gruszka3).Jedzenie();//10
+
+            Console.Write(++i + "  ");
+
+            ((Gruszka)gruszka3).Jedzenie();//11
+
+            Console.Write(++i + "  ");
+
+            ((IJedzenie)gruszka3).Jedzenie();//12 */
+            Console.ReadKey();
+        }
+    }
+    
+    
+    
+    
+        class Owoc:IJedzenie
+    {
+        public void Jedzenie() { Console.WriteLine("Owoc"); }
+    }
+    
+        class Gruszka:Owoc,IJedzenie
+    {
+        public void Jedzenie() { Console.WriteLine("Gruszka"); }
+    }
+    
+        interface IJedzenie
+    {
+        void Jedzenie();
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
