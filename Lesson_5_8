@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace interfejsy_7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string x = @"C:\001.txt";
+
+            if (File.Exists(x))
+            {
+                string content = File.ReadAllText(x);
+                Console.WriteLine("Current content of file:");
+                Console.WriteLine(content);
+            }
+
+
+            /*
+                Console.WriteLine("Please enter new content for the file:");
+                string newContent = Console.ReadLine();
+                File.WriteAllText(x, newContent); //ze prosto do odczytu            
+                File.AppendAllText(@"C:\001.txt", newContent); // mozna cos dopisywac ale tylko jedna linejka
+
+            */
+
+            /*
+                string newContent = Console.ReadLine();
+                Console.WriteLine("Do wczytania wiel linejkami podaj 1 zeby skonczyc edytowanie "); // Do wczytania wiel linejkami
+                while (newContent !="1")   // Do wczytania wiel linejkami -- ma minus bo kiedy zapisujemy lub odczytujemy plik zanowo otwiera sie i zamyka sie
+                {
+                   File.AppendAllText(x, newContent + Environment.NewLine);
+                   newContent = Console.ReadLine();
+
+                }
+                Console.ReadKey();
+            */
+
+            /*
+              Lepsze ale czegos traci danne
+              using (StreamWriter sw =new StreamWriter(x))
+              {
+                  string newContent = Console.ReadLine();
+                 while(newContent != "1")
+                {
+                    sw.Write(newContent + Environment.NewLine);
+                    newContent = Console.ReadLine();
+                }
+              }
+            */
+
+
+            /*
+            if(File.Exists("test.txt")){           // Usuwanie failu
+               File.Delete("test.txt");
+               if(File.Exists("test.txt") == false)
+                   Console.WriteLine("File deleted...");
+            }
+            else
+               Console.WriteLine("File test.txt does not yet exist!");
+               Console.ReadKey();
+            */
+
+
+        }
+    }
+}
