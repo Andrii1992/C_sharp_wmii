@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Collections;
+
+namespace ConsoleApplication1
+{
+    public class Car
+    {
+        public string firstname;
+        public int carid;
+        public int curspeed;
+
+        public Car(string name, int id, int speed)
+        {
+            this.firstname = name;
+            this.carid = id;
+            this.curspeed = speed;
+        }
+
+    }
+
+    class Garage : IEnumerable
+    {
+        Car[] myauto;
+
+        public Garage()
+        {
+            myauto = new Car[3];
+            myauto[0] = new Car("Rusty", 1, 30);
+            myauto[1] = new Car("Clunker", 2, 50);
+            myauto[2] = new Car("Zippy", 3, 100);
+        }
+        public IEnumerator GetEnumerator()
+        {
+            return myauto.GetEnumerator();
+        }
+
+    }
+
+    class DemoAuto
+    {
+        public static void Main(string[] args)
+        {
+            Garage carArray = new Garage();
+
+            foreach (Car c in carArray)
+            {
+                Console.WriteLine("{0} is going with {1} speed,and id={2}", c.firstname, c.curspeed, c.carid);
+            }
+            Console.ReadLine();
+        }
+    }
+}
