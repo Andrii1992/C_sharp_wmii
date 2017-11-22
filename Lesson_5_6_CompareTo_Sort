@@ -63,6 +63,24 @@ namespace ConsoleApp22
             else
                 return 0;
         }
+        
+        
+/*
+
+        public int CompareTo(Car obj)
+        {
+         
+            if(this.brand == obj.brand){
+
+            return this.year.CompareTo(obj.year); 
+            //     other               odwrotnie posortowana   
+            }
+            return   obj.brand.CompareTo(this.brand); // jak ruwne to sortuje po innym
+
+                    
+        }
+
+*/        
 
 
 
