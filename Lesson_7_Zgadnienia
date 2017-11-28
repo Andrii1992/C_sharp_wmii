@@ -1,0 +1,67 @@
+
+
+    Stwórz klasę Osoba o dodaj do niej modyfikator sealed. Następnie spróbuj stworzyć klasę potomną Student. Jaki komunikat błędu otrzymujesz?
+
+    W nowym projekcie wykonaj czynności:
+
+    stwórz klasę Aaa i dodaj w niej wrtualną metodę Metoda() typu void (ma wyświetlić string "Aaa").
+    stwórz klasę Bbb dziedziczącą po Aaa, w nowoutworzonej klasie przesłoń metodę Metoda() (ma wyświetlić string "Bbb") i dodaj do metody modyfikator sealed.
+    stwórz klasę Ccc dziedziczącą po Bbb, w nowoutworzonej klasie spróbuj przesłonić metodę Metoda(). Jaki komunikat błędu otrzymasz?
+    stwórz obiekt typu Ccc i wywołaj dla niego metodę Metoda().
+
+    Napisz program, który z klawiatury pobiera od użytkownika datę i godzinę (oddzielnie rok, miesiąc, itd). Wpisane wartości należy ustawić w obiekcie typu DateTime. Następnie dla obiektu wywołać metodę ToString(), jej wynik wyświetlić na konsoli.
+
+    Co się stanie jeśli nie podasz czasu?
+
+    Napisz program, który z klawiatury pobiera od użytkownika datę i godzinę w określonym formacie np. Thu 16 Nov 8:30 AM 2017. Następnie za pomocą metody DateTime.TryParseExact zapisz pobraną wartość w zmiennej typu DateTime. Na koniec wyświetl informację w konwencji "systemowej" lub wyświetl komunikat o błędnym formacie daty.
+
+    Podpowiedź: https://www.dotnetperls.com/datetime-tryparse
+
+    Napisz program, który z systemu pobiera aktualny czas i datę. Następnie zapisz to jako string w odpowiednim formacie np. DDMMYYYYhhmmss (pobaw się zmianą kolejności). Na koniec string wyświetl na konsoli.
+
+    Wykonaj poniższe czynności:
+
+    Stwórz w nowym projekcie klasę częściową Wspolrzedne (zapiszą ją w pliku WspolrzedneCzesc1.cs). Następnie zadeklaruj prywatne pola x i y. Dodaj konstruktr parametry inicjujący oba pola. Następnie w pliku WspolrzedneCzesc2.cs stwórz drugą część klasy. Dodaj tam metodę Pokaz(), która na konsoli wyświetla współrzędne.
+    Stwórz w klasie Program obiekt i wywołaj na nim metodę.
+    W istniejącym projekcie pomyśl co może robić metoda częściowa?
+
+    Na podstawie poniższych diagramów UML napisz dwa różne projekty. Możesz dodać metody aby podkreślić różnicę między agregacją częściową a całkowitą. W klasie Program stwórz krótki program testujący.
+
+diagram1
+
+diagram2
+
+    Wykonaj poniższe czynności:
+
+    pobierz (sklonuj) repozytorium https://github.com/pjastr/Ex701
+    przenalizuj plik Program.cs i zbudowaną łamigłówkę dziedziczenia klas.
+    W metodzie Main stwórz dokładnie 6 obiektów, dla każdego z nich wywołaj po 2 metody tak, aby na konsoli wyjście wyglądało następująco:
+
+A VirtualFun()
+D VirtualFun2()
+A NormalFun()
+A VirtualFun()
+B VirtualFun2()
+A NormalFun()
+B NormalFun()
+C VirtualFun()
+D VirtualFun()
+D VirtualFun2()
+B VirtualFun2()
+C VirtualFun()
+F VirtualFun()
+F VirtualFun2()
+
+    Wykonaj poniższe czynności:
+
+    pobierz repozytorium https://github.com/pjastr/Ex702
+    do klasy Osoba podepnij interfejs IComparable<T> aby było możliwe sortowanie (sam określ rodzaj po czym).
+
+    Napisz program od odmierzania czasu do świąt. Jako czas świąt przyjmij 24.12 bieżącego roku, godz 17:00. Jeśli jest przedświętami wyświetl na konsoli pozostałą liczbę dni; w przeciwnym wypadku wyświetl napis, że jest po świętach.
+
+    Napisz program, który tworzy folder o nazwie ABC w folderze projektu (o ile nie istnieje). W folderze ABC stwórz plik tekstowy 123.txt. W treści pliku dodaj swoj numer albumu np. 12345.
+
+    Podpowiedzi tu.
+
+    Napisz program, który sprawdza czy w folderze projektu istnieje folder na nazwie ABC. Jeśli tak, należy sprawdzić czy istnieje plik w tym folderze o nazwie bilet.txt. Jeśli plik istnieje, wyświetl na konsoli jego zwartość. Jeśli na którym etapie jest błąd, wyświetl komunikat dla użytkownika.
+
