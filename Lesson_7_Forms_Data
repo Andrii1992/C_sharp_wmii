@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+namespace Lesson_7_date
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+           // string format1 = "dd.MMM.yyyy hh:mm:ss";
+
+            string[] customFmts = {"h:mm:ss.ff t", "d MMM yyyy", "HH:mm:ss.f","dd MMM HH:mm:ss", @"\Mon\t\h\: M", "HH:mm:ss.ffffzzz" };
+
+
+            
+
+
+            string dateString = "Mon 16 Jun 8:30 AM 2008";
+            string format = "ddd dd MMM h:mm tt yyyy";
+            DateTime dateTime;
+            if (DateTime.TryParseExact(dateString, format, CultureInfo.InvariantCulture,DateTimeStyles.None, out dateTime))
+            {
+                Console.WriteLine(dateTime);
+            }
+
+
+
+            DateTime z = DateTime.Now;
+            string[] x = z.GetDateTimeFormats();
+            
+
+            //foreach (string zz in x) { Console.WriteLine(zz); }
+
+            string form = x[15];
+
+            string cx = z.ToString();
+
+            Console.WriteLine(cx);
+
+            Console.WriteLine(form);
+
+            DateTime.TryParseExact(cx, z.GetDateTimeFormats(), CultureInfo.DefaultThreadCurrentUICulture, DateTimeStyles.None, out dateTime);
+
+
+            Console.WriteLine(z.ToString("d", DateTimeFormatInfo.InvariantInfo));
+            // Displays 04/10/2008
+            Console.WriteLine(z.ToString("d",
+                              CultureInfo.CreateSpecificCulture("en-US")));
+            // Displays 4/10/2008                       
+            Console.WriteLine(z.ToString("d",
+                              CultureInfo.CreateSpecificCulture("en-NZ")));
+            // Displays 10/04/2008                       
+            Console.WriteLine(z.ToString("d",
+                              CultureInfo.CreateSpecificCulture("de-DE")));
+            // Displays 10.04.2008    
+
+            Console.WriteLine(z.ToString("D",
+                   CultureInfo.CreateSpecificCulture("en-US")));
+            // Displays Thursday, April 10, 2008                        
+           
+            Console.WriteLine(z.ToString("D",
+                              CultureInfo.CreateSpecificCulture("ru-RU")));
+
+          
+
+
+
+            Console.ReadKey();
+
+
+        }
+    }
+}
