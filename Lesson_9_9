@@ -1,0 +1,32 @@
+           unchecked
+            { int a = int.MaxValue;
+            Console.WriteLine(a);
+            try
+            {
+                Console.WriteLine(++a);
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+           
+
+            }
+            
+            
+            
+            
+            checked
+            { int a = int.MaxValue;
+            Console.WriteLine(a);
+            try
+            {
+                Console.WriteLine(++a);
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+           
+
+            }
