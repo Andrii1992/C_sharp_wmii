@@ -1,0 +1,34 @@
+// Count  - Свойство Count возвращает количество элементов в стеке.
+// Push() -  Метод Push() добавляет элемент в вершину стека.
+// Pop()  -  Метод Pop() удаляет и возвращает элемент из вершины стека. Если стек пуст, генерируется исключение типа InvalidOperationException.
+// Peek() -  Метод Peek() возвращает элемент из вершины стека, не удаляя его при этом.
+// Contains() - Метод Contains() проверяет наличие элемента в стеке и возвращает true в случае нахождения его там.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp35
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> stok = new Stack<int>();
+            stok.Push(0);
+            stok.Push(1);
+            stok.Push(2);
+            stok.Push(3);
+            stok.Push(4);
+            while (stok.Count != 0)
+            {
+                Console.WriteLine(stok.Pop());
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
