@@ -1,0 +1,69 @@
+// Add()          -  Добавляет в словарь пару "ключ-значение", определяемую параметрами key и value. Если ключ key 
+//            уже находится в словаре, то его значение не изменяется, и генерируется исключение ArgumentException
+// ContainsKey()  -  Возвращает логическое значение true, если вызывающий словарь содержит объект key в качестве ключа;
+//            а иначе — логическое значение false
+// ContainsValue()   -  Возвращает логическое значение true, если вызывающий словарь содержит значение value; в противном
+//            случае — логическое значение false
+// Remove()          -  Удаляет ключ key из словаря. При удачном исходе операции возвращается логическое значение true, а 
+//            если ключ key отсутствует в словаре — логическое значение false 
+//            Кроме того, в классе Dictionary<TKey, TValue> определяются собственные свойства, помимо тех, что уже 
+//            объявлены в интерфейсах, которые в нем реализуются. Эти свойства приведены ниже:
+
+// Comparer          -  Получает метод сравнения для вызывающего словаря
+// Keys              -  Получает коллекцию ключей
+// Values            -  Получает коллекцию значений
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApplication1
+{
+    class UserInfo
+    {
+        // Метод, реализующий словарь
+        public static Dictionary<int, string> MyDic(int i)
+        {
+            Dictionary<int, string> dic = new Dictionary<int,string>();
+            Console.WriteLine("Введите имя сотрудника: \n");
+            string s;
+            for (int j = 0; j < i; j++)
+            {
+                Console.Write("Name{0} --> ",j);
+                s = Console.ReadLine();
+                dic.Add(j, s);
+                Console.Clear();
+            }
+            return dic;
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Сколько сотрудников добавить? ");
+            try
+            {
+                int i = int.Parse(Console.ReadLine());
+                Dictionary<int, string> dic = UserInfo.MyDic(i);
+
+                // Получить коллекцию ключей
+                ICollection<int> keys = dic.Keys;
+
+                Console.WriteLine("База данных содержит: ");
+                foreach (int j in keys)
+                    Console.WriteLine("ID -> {0}  Name -> {1}",j,dic[j]);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Неверный ввод");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
