@@ -1,0 +1,86 @@
+
+AddRange()          -   Добавляет элементы из коллекции в конец вызывающей коллекции типа ArrayList
+BinarySearch()      -   Выполняет поиск в вызывающей коллекции значения. Возвращает индекс найденного элемента.
+           Если искомое значение не найдено, возвращает отрицательное значение. Вызывающий список должен быть отсортирован
+СоруТо()            -   Копирует содержимое вызывающей коллекции в массив, который должен быть одномерным и совместимым по
+           типу с элементами коллекции
+FixedSize()         -   Заключает коллекцию в оболочку типа ArrayList с фиксированным размером и возвращает результат. 
+           Возвращает часть вызывающей коллекции типа ArrayList. Часть возвращаемой коллекции начинается с элемента, 
+           указываемого по индексу, и включает количество элементов, определяемое параметром count. Возвращаемый объект 
+           ссылается на те же элементы, что и вызывающий объект.
+IndexOf()           -   Возвращает индекс первого вхождения объекта в вызывающей коллекции. Если искомый объект не обнаружен,
+           возвращает значение -1
+InsertRange()       -   Вставляет элементы коллекции в вызывающую коллекцию, начиная с элемента, указываемого по индексу
+Readonly()          -   Заключает коллекцию в оболочку типа ArrayList, доступную только для чтения, и возвращает результат
+RemoveRange()       -   Удаляет часть вызывающей коллекции, начиная с элемента, указываемого по индексу index, и включая 
+           количество элементов, определяемое параметром count
+Sort()              -   Сортирует вызывающую коллекцию по нарастающей
+
+
+
+
+using System;
+using System.Collections;
+
+namespace ConsoleApplication1
+{
+    class MyCollection
+    {
+        public static ArrayList NewCollection(int i)
+        {
+            Random ran = new Random();
+            ArrayList arr = new ArrayList();
+
+            for (int j = 0; j < i; j++)
+                arr.Add(ran.Next(1, 50));
+            return arr;
+        }
+
+        public static void RemoveElementMyCollection(int i, int j, ref ArrayList arr)
+        {
+            arr.RemoveRange(i, j);
+        }
+
+        public static void AddElementInMyCollection(int i, ref ArrayList arr)
+        {
+            Random ran = new Random();
+            for (int j = 0; j < i; j++)
+                arr.Add(ran.Next(1, 50));
+        }
+
+        public static void WriteMyCollection(ArrayList arr)
+        {
+            foreach (int a in arr)
+                Console.Write("{0}\t", a);
+            Console.WriteLine("\n");
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            // Создадим новую коллекцию чисел длиной 8
+            ArrayList Coll = MyCollection.NewCollection(8);
+            Console.WriteLine("Исходная коллекция чисел: ");
+            MyCollection.WriteMyCollection(Coll);
+
+            // Удалим пару элементов
+            MyCollection.RemoveElementMyCollection(5, 2, ref Coll);
+            Console.WriteLine("Коллекция после удаления предпоследних двух элементов: ");
+            MyCollection.WriteMyCollection(Coll);
+
+            // Добавим еще несколько элементов
+            MyCollection.AddElementInMyCollection(10, ref Coll);
+            Console.WriteLine("Добавили 10 элементов: ");
+            MyCollection.WriteMyCollection(Coll);
+
+            // Отсортируем теперь коллекцию
+            Coll.Sort();
+            Console.WriteLine("Отсортированная коллекция: ");
+            MyCollection.WriteMyCollection(Coll);
+
+            Console.ReadLine();
+        }
+    }
+}
