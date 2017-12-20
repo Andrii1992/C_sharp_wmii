@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //ArrayList liczby = new ArrayList();
+            //liczby.Add(1);
+            //liczby.Add(2);
+
+
+            //ArrayList liczby2 = new ArrayList();
+
+            //liczby2.Add(10d);
+            //liczby2.Add(8d);
+            //liczby2.Add(8.5d);
+            //liczby2.Sort();
+
+
+            Dictionary<string, int> slownik = new Dictionary<string, int>();
+            slownik.Add("er", 1);
+            slownik["zip"] = 2;
+
+            Console.WriteLine(slownik.Last());
+
+            
+            Console.WriteLine(slownik.Count());
+            Console.WriteLine(slownik.ContainsKey("er"));
+            slownik.Clear();
+            Console.ReadKey();
+        }
+    }
+}
