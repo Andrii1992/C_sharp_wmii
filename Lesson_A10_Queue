@@ -1,0 +1,47 @@
+
+// Count           - Свойство Count возвращает количество элементов в очереди.
+// Enqueue()       - Метод Enqueue() добавляет элемент в конец очереди.
+// Dequeue()       - Метод Dequeue() читает и удаляет элемент из головы очереди. 
+//       Если на момент вызова метода Dequeue() элементов в очереди больше нет,
+//       генерируется исключение InvalidOperationException.
+// Peek()          - Метод Peek() читает элемент из головы очереди, но не удаляет его.
+// TrimExcess()    - Метод TrimExcess() изменяет емкость очереди. 
+// Метод Dequeue() - удаляет элемент из очереди,но не изменяет ее емкости. 
+// TrimExcess() - позволяет избавиться от пустых элементов в начале очереди.
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp35
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            Queue<int> queue = new Queue<int>();
+            while (i != 10)
+            {
+                Console.WriteLine(i);
+                queue.Enqueue(i);
+                i++;
+            }
+
+            Console.WriteLine();
+
+            while (queue.Count != 0)
+            {
+                Console.WriteLine(queue.Dequeue());
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
+
