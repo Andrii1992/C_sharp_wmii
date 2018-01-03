@@ -1,0 +1,423 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CwWe
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+
+            // -------------------------------------------------
+            //              STACK
+            // -------------------------------------------------
+
+
+
+
+
+            // Count  - Свойство Count возвращает количество элементов в стеке.
+            // Push() -  Метод Push() добавляет элемент в вершину стека.
+            // Pop()  -  Метод Pop() удаляет и возвращает элемент из вершины стека. Если стек пуст,
+            // генерируется исключение типа InvalidOperationException.
+            // Peek() -  Метод Peek() возвращает элемент из вершины стека, не удаляя его при этом.
+            // Contains() - Метод Contains() проверяет наличие элемента в стеке и возвращает true в
+            // случае нахождения его там.
+
+
+
+
+            //Stack<int> z = new Stack<int>();
+
+            ////pop()
+            ////push()
+            ////peek()
+            ////contains(cos)
+
+            //z.Push(2);
+            //Console.WriteLine(z.Peek());
+            //z.Push(4);
+            //Console.WriteLine(z.Peek());
+            //z.Push(6);
+            //Console.WriteLine(z.Peek());
+            //z.Push(7);
+            //Console.WriteLine(z.Peek());
+
+            //Console.WriteLine(z.Contains(2));
+
+            //Console.WriteLine("----------------");
+            //while (z.Count > 0 )
+            //{
+            //    Console.WriteLine(z.Pop());
+            //}
+
+            //Stack<Zeta> z = new Stack<Zeta>();
+            //z.Push(new Zeta(2, 2));
+            //Console.WriteLine(z.Peek());
+            //z.Push(new Zeta(4, 2));
+            //Console.WriteLine(z.Peek());
+            //z.Push(new Zeta(2, 5));
+            //Console.WriteLine(z.Peek());
+            //z.Push(new Zeta(2, 8));
+            //Console.WriteLine(z.Peek());
+            //z.Push(new Zeta(1, 2));
+            //Console.WriteLine(z.Peek().z);
+            //Console.WriteLine("--------------------");
+            //Zeta er = new Zeta(2, 2);
+            //z.Push(er);
+            //Console.WriteLine(z.Contains(er));
+            //Zeta x = new Zeta(2, 2);
+
+
+
+
+
+            // -------------------------------------------------
+            //               DICTIONARY
+            // -------------------------------------------------
+
+
+
+
+
+            //slownik
+
+            //Dictionary<string, string> dic = new Dictionary<string, string>();
+            //dic.Add("tom","Tom Hardy");
+            //dic.Add("jeek", "Jeek Daniels");
+            //dic.Add("vw", "volkswagen");
+            //dic.Add("v", "volkswagenZZZZ");
+            //Console.WriteLine(dic["vw"]);
+            //Console.WriteLine("-------------------");
+
+            //foreach (KeyValuePair<string, string> te in dic)
+            //{
+            //    Console.WriteLine(te.Value);
+            //}
+            //Console.WriteLine("dic.Count - " + dic.Count); // количество елементов 
+            //Console.WriteLine(dic.Comparer);               //
+            //dic.ContainsValue("2");                        // существует ли такое значение
+            //dic.ContainsKey("2");                          // существует ли такой индекс
+            //dic["v"] = ".......";                          // можно изменять по индексу
+            //Console.WriteLine(dic["v"]);
+            //dic.Remove("v");                               // удаление по индексу
+            //dic.Clear();                                   // удалить все
+
+
+
+
+
+            // -------------------------------------------------
+            //               LIST
+            // -------------------------------------------------
+
+
+
+
+
+
+            //List<int> x = new List<int>();
+
+            //int[] tab = new int[20];
+
+
+            //x.AddRange(tab);          // добавляет целый массив
+            //x.Contains(3);            // определяет входит ли элемент в коллекцию
+            //x.IndexOf(2);             // возвращает индекс элемента
+            //x.Insert(0, 89);          // вставляет при етом здвигается целая колекцыя                
+            //x.RemoveRange(0, 3);      // удаляет с заданного идекса 3 поля
+            //x.RemoveAt(4);            // удаляет по заданному индексу
+            //x.Reverse();              // разворачивает
+            //// x.ToArray              // возвращает масив
+            //int[] tab2 = x.ToArray();
+            //x.Sort();                 // sortuje
+            //x.Clear();
+
+
+
+
+
+            // -------------------------------------------------
+            //               QUEUE
+            // -------------------------------------------------
+
+
+
+
+
+            // Count           - Свойство Count возвращает количество элементов в очереди.
+            // Enqueue()       - Метод Enqueue() добавляет элемент в конец очереди.
+            // Dequeue()       - Метод Dequeue() читает и удаляет элемент из головы очереди. 
+            //       Если на момент вызова метода Dequeue() элементов в очереди больше нет,
+            //       генерируется исключение InvalidOperationException.
+            // Peek()          - Метод Peek() читает элемент из головы очереди, но не удаляет его.
+            // TrimExcess()    - Метод TrimExcess() изменяет емкость очереди. 
+            // Метод Dequeue() - удаляет элемент из очереди,но не изменяет ее емкости. 
+            // TrimExcess()    - позволяет избавиться от пустых элементов в начале очереди.
+
+
+
+            //int i = 0;
+            //Queue<int> queue = new Queue<int>();
+            //while (i != 10)
+            //{
+            //    Console.WriteLine(i);
+            //    queue.Enqueue(i);
+            //    i++;
+            //}
+
+            //Console.WriteLine();
+
+            //while (queue.Count != 0)
+            //{
+            //    Console.WriteLine(queue.Dequeue());
+            //}
+            //***************************************************
+            //Queue<int> k = new Queue<int>();
+            //k.Enqueue(33);
+
+            //k.Enqueue(8);
+            ////Console.WriteLine(k.Peek());
+            //k.Enqueue(388);
+            ////Console.WriteLine(k.GetEnumerator<int>.ToString());
+            //Console.WriteLine(k.Dequeue());
+            //Console.WriteLine(k.Peek());
+
+            //Queue<string> queue = new Queue<string>();
+
+            //queue.Enqueue("bill");
+            //queue.Enqueue("jon");
+            //queue.Enqueue("jack");
+
+            //int z = queue.Count;
+            //for (int i = 0; i < z; i++)
+            //{
+            //    Console.WriteLine(queue.Dequeue()); // 
+            //}
+
+
+
+
+
+
+            // -------------------------------------------------
+            //               ARRAY LIST
+            // -------------------------------------------------
+
+
+
+
+
+            // AddRange() - Добавляет элементы из коллекции в конец вызывающей коллекции типа ArrayList
+            // BinarySearch() - Выполняет поиск в вызывающей коллекции значения.Возвращает индекс найденного элемента.
+            //           Если искомое значение не найдено, возвращает отрицательное значение.Вызывающий список должен быть отсортирован
+            // СоруТо() - Копирует содержимое вызывающей коллекции в массив, который должен быть одномерным и совместимым по
+            // типу с элементами коллекции
+            // FixedSize() - Заключает коллекцию в оболочку типа ArrayList с фиксированным размером и возвращает результат.
+            //           Возвращает часть вызывающей коллекции типа ArrayList. Часть возвращаемой коллекции начинается с элемента,
+            //           указываемого по индексу, и включает количество элементов, определяемое параметром count.Возвращаемый объект
+            //           ссылается на те же элементы, что и вызывающий объект.
+            // IndexOf() - Возвращает индекс первого вхождения объекта в вызывающей коллекции.Если искомый объект не обнаружен,
+            //           возвращает значение -1
+            // InsertRange() - Вставляет элементы коллекции в вызывающую коллекцию, начиная с элемента, указываемого по индексу
+            // Readonly() - Заключает коллекцию в оболочку типа ArrayList, доступную только для чтения, и возвращает результат
+            // RemoveRange() - Удаляет часть вызывающей коллекции, начиная с элемента, указываемого по индексу index, и включая
+            //   количество элементов, определяемое параметром count
+            // Sort() - Сортирует вызывающую коллекцию по нарастающей
+            // Contains() - референция
+            // Clear()    - удаляет все
+            // AddRange() - целий масив добавляет
+            // InsertRange(0, new double[] { 2, 2, 5 }); - добавляет целий маси по индексу
+            // Insert()   - добавляет по индексу
+            // count - 1 !!!!
+            // 0         !!!!
+
+            ArrayList zimo = new ArrayList();
+            zimo.Add("2");
+            zimo.Add('2');
+            zimo.Add("Lopes");
+            zimo.Add("Lo");
+            zimo.Add("Lo");
+            zimo.Add(3d);
+            zimo.Add(true);
+            zimo.Add(3.586f);
+            zimo.Insert(2,580000);
+            zimo.InsertRange(0, new double[] { 2, 2, 5 }); // добавляет целий маси по индексу
+            ArrayList zao = new ArrayList { 1, 3, };
+            
+            Console.WriteLine("IndexOf     L/P  Lopes  -  " + zimo.IndexOf("Lopes"));
+            Console.WriteLine("LastIndexOf P/L  Lopes  -  " + zimo.LastIndexOf("Lopes"));
+
+            Console.WriteLine(zimo.Count);
+
+            Console.WriteLine(new string('-', 80)); //!!!!!!!!!!!!!!!!!!!!Znak ILE RAZY DRUKOWAC!!!!
+            zimo.AddRange(zao);
+
+           // int[] tab = new int[4];
+           // zimo.AddRange(tab);
+
+            Console.WriteLine(zimo.Count);
+
+            Console.WriteLine(new string('-', 80)); //!!!!!!!!!!!!!!!!!!!!Znak ILE RAZY DRUKOWAC!!!!
+
+
+            foreach (object z in zimo)
+            {
+                Console.WriteLine(z);
+            }
+
+            Console.WriteLine(new string('-', 80)); //!!!!!!!!!!!!!!!!!!!!Znak ILE RAZY DRUKOWAC!!!!
+
+            zimo.Remove("Lopes");
+            zimo.RemoveAt(zimo.IndexOf("Lo"));
+            Console.WriteLine(zimo.Contains("Lo")); // есть ли !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            zimo.RemoveRange(0, 2);                 // с какого места и сколько удалить       
+            foreach (var z in zimo)
+            {
+                Console.WriteLine(z);
+            }
+
+            Console.WriteLine(new string('-', 80));//
+
+            IEnumerator zop = zimo.GetEnumerator();
+
+            while (zop.MoveNext())
+            {
+                Console.Write(zop.Current + ", ");
+            }
+
+
+            zimo.Add(55);
+            zimo.Add(55);
+            zimo.Add(55);
+            zimo.Add(55);
+
+            foreach (var z in zimo)
+            {
+                Console.WriteLine(z);
+            }
+
+            Console.WriteLine(new string('-', 80));//
+
+            while (zimo.Contains(55))
+            {
+                zimo.Remove(55);
+                Console.WriteLine("Remove(55)");
+            }
+
+            Console.WriteLine(new string('-', 80)); //
+
+            foreach (var z in zimo)
+            {
+                Console.WriteLine(z);
+            }
+
+
+
+
+
+
+
+
+            //// Создадим новую коллекцию чисел длиной 8
+            //ArrayList Coll = MyCollection.NewCollection(8);
+            //Console.WriteLine("Исходная коллекция чисел: ");
+            //MyCollection.WriteMyCollection(Coll);
+
+            //// Удалим пару элементов
+            //MyCollection.RemoveElementMyCollection(5, 2, ref Coll);
+            //Console.WriteLine("Коллекция после удаления предпоследних двух элементов: ");
+            //MyCollection.WriteMyCollection(Coll);
+
+            //// Добавим еще несколько элементов
+            //MyCollection.AddElementInMyCollection(10, ref Coll);
+            //Console.WriteLine("Добавили 10 элементов: ");
+            //MyCollection.WriteMyCollection(Coll);
+
+            //// Отсортируем теперь коллекцию
+            //Coll.Sort();
+            //Console.WriteLine("Отсортированная коллекция: ");
+            //MyCollection.WriteMyCollection(Coll);
+
+
+
+
+
+            // -------------------------------------------------
+            //               TUPLE
+            // -------------------------------------------------
+
+
+
+
+            // кортедж
+            //Tuple<int, string, bool> tr = new Tuple<int, string, bool>(2,"none",false);
+            //List<Tuple<int, string, bool>> zer = new List<Tuple<int, string, bool>>();
+            //zer.Add(new Tuple<int, string, bool>(2, "Noreone", false));
+            //zer.Add(new Tuple<int, string, bool>(2, "BBC", false));
+            //zer.Add(new Tuple<int, string, bool>(2, "Berod", false));
+            //zer.Add(new Tuple<int, string, bool>(2, "Kinglis", false));
+            //foreach (Tuple<int, string, bool> tr in zer)
+            //{
+            //    Console.WriteLine(tr.Item2);
+            //}
+
+            Console.ReadKey();
+
+        }
+        class MyCollection
+        {
+         //               ARRAY LIST
+            public static ArrayList NewCollection(int i)
+            {
+                Random ran = new Random();
+                ArrayList arr = new ArrayList();
+
+                for (int j = 0; j < i; j++)
+                    arr.Add(ran.Next(1, 50));
+                return arr;
+            }
+
+            public static void RemoveElementMyCollection(int i, int j, ref ArrayList arr)
+            {
+                arr.RemoveRange(i, j);
+            }
+
+            public static void AddElementInMyCollection(int i, ref ArrayList arr)
+            {
+                Random ran = new Random();
+                for (int j = 0; j < i; j++)
+                    arr.Add(ran.Next(1, 50));
+            }
+
+            public static void WriteMyCollection(ArrayList arr)
+            {
+                foreach (int a in arr)
+                    Console.Write("{0}\t", a);
+                Console.WriteLine("\n");
+            }
+        }
+
+        class Zeta
+            {
+                public double z;
+                public double z2;
+
+                public Zeta(double z, double z2)
+                {
+                    this.z = z;
+                    this.z2 = z2;
+                }
+
+
+            }
+
+        
+    }
+}
