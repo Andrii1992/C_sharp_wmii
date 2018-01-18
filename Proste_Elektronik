@@ -1,0 +1,10 @@
+HashSet<Elektornika> zet = new HashSet<Elektornika>();
+              
+                foreach (var el in doNaprawy)
+                {
+                    if (el.NumerSeryjny == ile)
+                    {
+                        zet.Add(el);                       
+                    }
+                }
+                doNaprawy.ExceptWith(zet);
